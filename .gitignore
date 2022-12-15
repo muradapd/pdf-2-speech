@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# My MP3 and PDF files
+mp3_files/*
+pdf_files/*
