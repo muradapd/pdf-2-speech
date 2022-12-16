@@ -6,5 +6,5 @@ Follow the directions in the user.py file to use this program.
 This is a Work In Progress and more improvements may be coming in the future.
 
 Things I want to add:
- - Would be cool if the code could automatically add the mp3 files to apple music 
- - Maybe turn this into a microservice that I can host in AWS and access via a webapp
+ - Automatically make a new apple music playlist and add the mp3 files to it
+ - Set up a webapp microservice hosted in AWS

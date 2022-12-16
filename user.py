@@ -37,8 +37,8 @@
 # these params to inform all of its processes.
 PDF_FILES_ROOT = "pdf_files/" # <- change this to use a different PDF files source folder
 MP3_FILES_ROOT = "mp3_files/" # <- change this to use a different MP3 files destination folder
-PDF_FILE_NAME = "networking_textbook.pdf" # <- change this to the file you want to synthesize
-BUCKET_NAME = "muradaz-mp3-files" # <- change this to the S3 bucket you made for Polly output
+PDF_FILE_NAME = "textbook.pdf" # <- change this to the file you want to synthesize
+BUCKET_NAME = "my-mp3-files" # <- change this to the S3 bucket you made for Polly output
 CHAPTER_RANGES = [ # <- update this to include all chapter page ranges to synthesize 
     {"name": "chapter_1", "range": range(28, 93)},
     {"name": "chapter_2", "range": range(108, 192)}

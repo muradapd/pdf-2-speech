@@ -2,7 +2,8 @@
  * NOTE: This runner file should not need to be edited to meet your needs.
  * See the instructions in the user.py file before making changes to this file.
 """
-import PyPDF2, boto3, threading, time, os, user, shutil
+import PyPDF2, boto3, threading, os, sys
+import time, user, shutil, subprocess
 from pydub import AudioSegment
 
 # Global variables used throughout the script
@@ -157,5 +158,18 @@ def synthesize_chapters():
             print("%s is fully COMPLETE!\n\n" % chapter_name)
     print("All chapters fully COMPLETE! Thanks for using PDF-2-Speech!")
 
+# Installs all of the necessary python packages using pip
+def install_packages():
+    packages = ['pyffmpeg', 'PyPDF2', 'boto3', 'pydub']
+    print("---------------------------------------------")
+    print("Installing necessary packages: ", packages)
+    print("---------------------------------------------")
+    for package in packages:
+        print("Installing:", package, "...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        print(package, "installed!")
+        print("---------------------------------------------")
+
 if __name__ == "__main__":
+    install_packages()
     synthesize_chapters()
